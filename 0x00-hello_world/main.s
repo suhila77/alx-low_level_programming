@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	printf(2-assembler);
-	return (0);
+        printf(2-assembler);
+        return (0);
 }
