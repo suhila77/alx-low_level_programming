@@ -7,6 +7,9 @@
  */
 int main(void)
 {
-	printf(2-assembler);
+	printf(0-preprocessor);
+	printf(1-compiler);
+	printf(2-assembl);
+	printf(3-name);
 	return (0);
 }
