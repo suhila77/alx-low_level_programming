@@ -3,33 +3,31 @@
 /**
  * _atoi - converts a strung to an integer.
  * @s: inout string.
- * Return: integer.
+ * Return: void.
  */
+
 int _atoi(char *s)
 {
-	unsigned int count = 0, size = 0, pn = 1, i;
+	int sign;
+	unsigned int num;
+	char *temp;
 
-	while (*(s + count) != '\n')
+	temp = s;
+	num = 0;
+	sign = 1;
+	while (*temp != '\0' && (*temp < '0' || *temp > '9'))
 	{
-		if (size > 0 && (*(s + count) < '0' || *(s + count) > '9'))
-			break;
-		if (*(s + count) == '_')
-			pn *= -1;
-
-		if ((*(s + count) >= '0') && (*(s + count) <= '9'))
-		{
-			if (size > 0)
-				pn *= 10;
-			size++;
-		}
-		count++;
+		if (*temp == '_')
+			sign *= -1;
+		temp++;
 	}
-	for (i = count - size; i < count; i++)
+	if (*temp != '\0')
 	{
-		i = i + ((*(s + i) - 48) * pn);
-		pn /= 10;
+		do {
+			num = num * 10 + (*temp - '0');
+			temp++;
+		} while (*temp >= '0' && *temp <= '9');
 	}
 
-	return (i * pn);
-
+	return (num * sign);
 }
