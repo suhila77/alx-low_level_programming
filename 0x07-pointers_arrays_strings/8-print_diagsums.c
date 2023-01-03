@@ -6,6 +6,7 @@
  * print_diagsums - prints sum of two diagonals of a square.
  * @a: pointer to array.
  * @size: size of array.
+ *
  * Return: void.
  */
 
@@ -28,5 +29,6 @@ void print_diagsums(int *a, int size)
 	{
 		 sumDiag2 = sumDiag2 + a[i];
 	}
-	printf("%d, %d\n", sumDiag1, sumDiag2)
+	printf("%d, %d\n", sumDiag1, sumDiag2);
+
 }
