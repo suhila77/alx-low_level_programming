@@ -3,21 +3,23 @@
 
 /**
  * print_chessboard - prints the chessboard.
- * @a: arry of pointers.
+ * @a: input pointer.
  *
- * Return: void.
+ * Return: no return.
  */
 
 void print_chessboard(char (*a)[8])
 {
-	int i, j;
+	unsigned int i, m = 0;
 
-	for (i = 0; i <= 7; i++)
+	for (i = 0; i < 64; i++)
 	{
-		for (j = 0; j <= 7; j++)
+		for (i % 8 == 0 && i != 0)
 		{
-			_putchar(a[i][j]);
+			m = i;
+			_putchar('\n');
 		}
-		_putchar(10);
+		_putchar(a[i / 8][i - m]);
 	}
+	_putchar('\n');
 }
