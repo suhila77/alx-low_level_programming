@@ -14,12 +14,12 @@ void print_line(int n)
 	{
 		for (i = 0; i < n; i++)
 		{
-			_putchar (95);
+			print_line(95);
 		}
-		_putchar ('\n');
+		print_line('\n');
 	}
 	else
 	{
-		_putchar ('\n');
+		print_line('\n');
 	}
 }
