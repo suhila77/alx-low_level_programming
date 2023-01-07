@@ -5,7 +5,7 @@
 
 /**
  * check_num - check - string there are digit
- * @str: arry str
+ * @str: array str
  *
  * Return: Always 0 (Success)
  */
@@ -19,7 +19,7 @@ int check_num(char *str)
 	count = 0;
 	while (count < strlen(str)) /*count strinng*/
 	{
-		if (isdigit(str[count])) /*check if str there are digit*/
+		if (!isdigit(str[count])) /*check if str there are digit*/
 		{
 			return (0);
 		}
@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
 			sum += str_to_int;
 		}
 
-		/*Condition if one of the number contains aymbols that are not digits*/
+		/*Condition if one of the number contains symbols that are not digits*/
 		else
 		{
 			printf("Error\n");
