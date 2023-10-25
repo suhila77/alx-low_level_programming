@@ -9,10 +9,9 @@
  * Return: largest number
  */
 
-int largest_number(int a, intb, int c)
+int largest_number(int a, int b, int c)
 {
 	int largest;
-
 	if (a > b)
 	{
 		if (a > c)
@@ -35,5 +34,6 @@ int largest_number(int a, intb, int c)
        	{
 		largest = c;
 	}
+
 	return (largest);
 }
